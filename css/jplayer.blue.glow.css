@@ -1,0 +1,135 @@
+.jp-details, .jp-playlist {
+	background: #373737;
+	overflow-y: scroll;
+	position: absolute;
+	top: 67px;
+	bottom: 0;
+	left: 0;
+}
+
+.jp-interface {
+	background: #282828;
+}
+
+.jp-video .jp-interface * {
+	color: #00FDFF;
+	text-shadow: 0 0 4px rgba(2, 253, 255, 0.7);
+	transition: all .2s ease;
+}
+
+.jp-playlist li {
+	position:relative;
+	border-bottom: 1px solid #171717;
+}
+
+.jp-playlist ul {
+	position:relative;
+}
+
+.jp-playlist li:after {
+	content:"";
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100%;
+	height:1px;
+	background: rgba(238, 238, 238, 0.31);
+}
+
+div.jp-type-playlist div.jp-playlist li.jp-playlist-current {
+	list-style-type: none;
+}
+
+div.jp-type-playlist div.jp-playlist a.jp-playlist-current,
+div.jp-type-playlist div.jp-playlist li.jp-playlist-current:before,
+div.jp-type-playlist div.jp-playlist a:hover {
+  color: #00FDFF;
+  text-shadow: 0 0 4px rgba(2, 253, 255, 0.7);
+  transition: all .2s ease;
+}
+
+div.jp-type-playlist div.jp-playlist a{
+  color: #A9A9A9;
+}
+
+div.jp-type-playlist div.jp-playlist li.jp-playlist-current:before {
+	content: "\f01d";
+	margin-right: -15px;
+	margin-left: 5px;
+}
+
+.jp-controls button,
+.jp-volume-controls button,
+.jp-toggles button {
+	background: none !important;
+	border:0 !important;
+	color: #A5A5A5;
+}
+
+.jp-play:before {
+	content: "\f04b";
+}
+
+.jp-state-playing .jp-play:before {
+	content: "\f04c";
+}
+
+.jp-stop:before {
+	content: "\f04d";
+}
+
+.jp-next:before {
+	content: "\f04e";
+}
+
+.jp-previous:before {
+	content: "\f04a";
+}
+
+.jp-mute:before {
+	content: "\f026";
+}
+
+.jp-volume-max:before {
+	content: "\f028";
+}
+
+.jp-repeat:before {
+	content: "\f01e";
+}
+
+.jp-shuffle {
+	display:none;
+}
+
+.jp-volume-bar {
+	background: none;
+	border: 1px dashed;
+	height: 11px;
+	padding: 2px;
+	border-radius: 5px;
+}
+
+.jp-volume-bar-value {
+	background: #00FDFF;
+	box-shadow: 0 0 5px 0 #00FDFF;
+}
+
+.jp-controls button,
+.jp-volume-controls button,
+.jp-toggles button {
+	text-indent: initial;
+}
+
+div.jp-type-playlist div.jp-playlist li.jp-playlist-current:before,
+.jp-controls button:before,
+.jp-volume-controls button:before,
+.jp-toggles button:before {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	transform: translate(0, 0);
+}
