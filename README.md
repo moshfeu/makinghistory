@@ -13,3 +13,6 @@ config = {
   getContent(response: JQuery): Function => string, /* required, `page` is a jQuery element which hold the body of the page, should returns string */
 }
 ```
+
+Also, You need a simple php server to run the _proxy.php_.
+For localhost I'm using the [built-in php server](http://php.net/manual/en/features.commandline.webserver.php)
