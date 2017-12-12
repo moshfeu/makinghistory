@@ -1,5 +1,5 @@
-# makinghistory
-The new "Make history" player
+# Live version
+http://makinghistory.smydesign.co.il
 
 # Configuration
 
