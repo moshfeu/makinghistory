@@ -1,5 +1,9 @@
 Podcast webapp for play and display the post, all from the RSS!
 
+**Credits**
+- [jPlayer](http://jplayer.org/)
+- [rss2json](https://rss2json.com/)
+
 # Live version
 http://makinghistory.smydesign.co.il
 
