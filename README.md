@@ -1,3 +1,5 @@
+Podcast webapp for play and display the post, all from the RSS!
+
 # Live version
 http://makinghistory.smydesign.co.il
 
