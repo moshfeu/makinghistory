@@ -1,0 +1,28 @@
+{
+  "name": "podcast-player",
+  "description": "Podcast webapp for play and display the post, all from the RSS!",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.6",
+    "jplayer": "^2.9.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "php -S localhost:8000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moshfeu/podcast-player.git"
+  },
+  "keywords": [
+    "podcast",
+    "player"
+  ],
+  "author": "moshfeu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/moshfeu/podcast-player/issues"
+  },
+  "homepage": "https://github.com/moshfeu/podcast-player#readme"
+}
