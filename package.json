@@ -7,9 +7,12 @@
     "bootstrap": "^4.0.0-alpha.6",
     "jplayer": "^2.9.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "ftp-deploy": "^1.2.2"
+  },
   "scripts": {
-    "start": "php -S localhost:8000"
+    "start": "php -S localhost:8000",
+    "deploy": "node dev/deploy"
   },
   "repository": {
     "type": "git",

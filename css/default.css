@@ -809,7 +809,6 @@ div.jp-type-playlist div.jp-playlist a.jp-playlist-item-remove {
 
 #content-wrapper {
   overflow-x: hidden;
-  padding: 0 20px 0 0;
 }
 
 #content-wrapper iframe:not([src*="youtube.com"]) {
@@ -841,11 +840,14 @@ div.jp-type-playlist div.jp-playlist a.jp-playlist-item-remove {
 }
 
 @media only screen and (max-width: 767px) {
+  .desktop {
+    display: none !important;
+  }
   .brnad {
     transform: translate(-50%, 15%);
   }
   .jp-video {
-    width: 80%;
+    width: 75%;
     position: absolute;
     top: 51px;
     right: 0;
@@ -855,7 +857,7 @@ div.jp-type-playlist div.jp-playlist a.jp-playlist-item-remove {
     width: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
-    padding: 0 5px;
+    padding: 50px 5px 0;
     background-color: #fff;
   }
   .mobile-header {
@@ -882,6 +884,10 @@ div.jp-type-playlist div.jp-playlist a.jp-playlist-item-remove {
     right: 5px;
     transform: translate(0, -50%);
   }
+  .mobile-menu-trigger.info {
+    right: auto;
+    left: 5px;
+  }
   .mobile-header img {
     height: 40px;
   }
@@ -898,8 +904,11 @@ div.jp-type-playlist div.jp-playlist a.jp-playlist-item-remove {
     transform-origin: 0 0;
     transition: all .4s ease;
   }
-  #menu-trigger-mobile:checked+.main #page {
-    transform: translate(-80%, 0);
+  #menu-trigger-mobile:checked~.main #page {
+    transform: translate(-75%, 0);
+  }
+  #info-trigger-mobile:checked~.main #page {
+    transform: translate(25%, 0);
   }
   .jp-controls-holder {
     width: auto;
@@ -908,10 +917,38 @@ div.jp-type-playlist div.jp-playlist a.jp-playlist-item-remove {
     margin: auto;
     float: none;
   }
+  .info-menu {
+    background: #373737;
+    position: absolute;
+    left: 0;
+    width: 25%;
+    height: 100%;
+    padding-top: 38px;
+    text-align: left;
+    direction: ltr;
+  }
+  .info-menu>div {
+    position: relative;
+    padding: 10px 0 10px 10px;
+    border-bottom: 1px solid #171717;
+  }
+  .info-menu>div:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(238, 238, 238, 0.31);
+  }
 }
 
 @media only screen and (min-width: 768px) {
   .mobile {
     display: none !important;
+  }
+
+  #content-wrapper {
+    padding: 0 20px 0 0;
   }
 }

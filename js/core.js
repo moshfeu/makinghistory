@@ -168,11 +168,11 @@ function getPage(link, stayLocation, callback) {
     if (!stayLocation) {
       document.title = title;
 
-      // ga('send', {
-      //   'hitType': 'pageview',
-      //   'page': getPath(),
-      //   'title': title
-      // });
+      ga('send', {
+        'hitType': 'pageview',
+        'page': getPath(),
+        'title': title
+      });
     }
     page.html(content);
 
@@ -225,6 +225,13 @@ function scrollToTrack() {
 var loader;
 $(function () {
   loader = $('#loader').clone();
+  const cbs = $('input[type="checkbox"]').on('change', function() {
+    cbs.not(this).prop('checked', false);
+  });
+
+  $('a[href="about.php"]').on('click', function() {
+    dataLayer.push({'event': 'about'});
+  });
 });
 
 $(window).bind('hashchange', function (e) {

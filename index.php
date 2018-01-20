@@ -2,6 +2,16 @@
 <html>
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-63652879-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-63652879-1');
+  </script>
+
   <meta charset="utf-8" />
   <title>עושים הסטוריה - 2.0</title>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
@@ -29,7 +39,6 @@
 
 <body>
   <div id="preload">
-    <?xml version="1.0" ?>
     <svg width="201" height="197" xmlns="http://www.w3.org/2000/svg">
       <g>
         <path stroke="null" id="svg_2" d="m88.275749,12.770495c15.845421,-2.123048 32.319496,-0.182237 46.99865,6.278026c15.672226,6.770063 29.276184,18.250921 38.542862,32.601995c9.221085,14.105053 14.168823,30.952755 14.022995,47.809574c0.027374,18.542503 -6.17775,37.012093 -17.321472,51.827873c-13.931946,18.779419 -35.699982,31.52681 -58.925995,34.324127c-13.458069,1.18454 -27.289772,0.473831 -40.046272,-4.300751c-17.458233,-6.159576 -32.811584,-18.050476 -43.144381,-33.412964c-11.535507,-16.947937 -16.765665,-38.078171 -14.396621,-58.452141c1.867907,-17.430862 9.23025,-34.205673 20.747567,-47.41777c13.558353,-15.763409 32.920914,-26.378643 53.522667,-29.25797z"
@@ -44,13 +53,17 @@
     />
   </div>
   <input type="checkbox" id="menu-trigger-mobile" class="mobile" />
+  <input type="checkbox" id="info-trigger-mobile" class="mobile" />
   <div class="main">
     <div class="mobile mobile-header">
       <div class="mobile-header-inner">
         <label for="menu-trigger-mobile" class="mobile-menu-trigger">
-          <i class="genericon genericon-menu"></i>
+          <i class="fa fa-bars"></i>
         </label>
         <img src="image/logo.svg" />
+        <label for="info-trigger-mobile" class="mobile-menu-trigger info">
+          <i class="fa fa-share-alt"></i>
+        </label>
       </div>
     </div>
     <div id="jp_container_N" class="jp-video jp-video-270p" role="application" aria-label="media player">
@@ -108,8 +121,11 @@
         </div>
       </div>
     </div>
+    <div class="mobile info-menu">
+      <?php include 'share-menu.php'; ?>
+    </div>
     <div id="page">
-      <div class="navbar navbar-default navbar-fixed-top">
+      <div class="navbar navbar-default navbar-fixed-top desktop">
         <div class="navbar-header pull-right">
           <span class="navbar-brand">
             <img src="image/logo.svg" />
@@ -138,37 +154,7 @@
               </a>
               <ul class="dropdown-menu">
                 <li class="shares">
-                  <div class="github">
-                    <iframe src="https://ghbtns.com/github-btn.html?user=moshfeu&repo=makinghistory&type=fork&count=true" frameborder="0" scrolling="0"
-                      width="100px" height="20px"></iframe>
-                  </div>
-                  <div class="linkedin">
-                    <script src="//platform.linkedin.com/in.js">
-                      lang: en_US
-                    </script>
-                    <script type="IN/Share" data-url="http://makinghistory.smydesign.co.il/" data-counter="right"></script>
-                  </div>
-                  <div class="twitter">
-                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://makinghistory.smydesign.co.il/" data-text="הנגן החדש של עושים הסטוריה">Tweet</a>
-                    <script>
-                      ! function (d, s, id) {
-                        var js, fjs = d.getElementsByTagName(s)[0],
-                          p = /^http:/.test(d.location) ? 'http' : 'https';
-                        if (!d.getElementById(id)) {
-                          js = d.createElement(s);
-                          js.id = id;
-                          js.src = p + '://platform.twitter.com/widgets.js';
-                          fjs.parentNode.insertBefore(js, fjs);
-                        }
-                      }(document, 'script', 'twitter-wjs');
-                    </script>
-                  </div>
-                  <div class="facebook">
-                    <div class="fb-share-button" data-href="http://makinghistory.smydesign.co.il/" data-layout="button_count"></div>
-                  </div>
-                  <div class="gplus">
-                    <div class="g-plusone" data-size="medium" data-align="right" data-href="http://makinghistory.smydesign.co.il/"></div>
-                  </div>
+                  <?php include 'share-menu.php'; ?>
                 </li>
               </ul>
             </li>
